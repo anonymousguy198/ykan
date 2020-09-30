@@ -8,9 +8,8 @@ typedef enum{
   false,true
 }bool;
 
-int testfn(int a,int b){
+void testfn(int a,int b){
   printf("a is %d b is %d\n",a,b);
-  return 0;
 }
 
 struct test{
@@ -19,8 +18,8 @@ struct test{
 
 };
 
-bool initClass(struct test cl){
-  cl.i=10;
-  cl.fn=testfn;
+bool initClass(struct test *cl){
+  cl->i=10;
+  cl->fn=&testfn;
   return true;
 }
