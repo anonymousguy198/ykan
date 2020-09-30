@@ -4,7 +4,7 @@
 it makes it easy to write *Vulkan* apps easyer without needing to strugle
 with vulkan's long setup process.
 
-##what ykan has
+## what ykan has
 
 **done**
 
@@ -34,7 +34,7 @@ with vulkan's long setup process.
   * tile colision
   * 3D level editor (that also has objects)
 
-##basic code
+## basic code
 
 To make a ykan project you need to setup some things.
 
