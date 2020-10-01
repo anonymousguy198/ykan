@@ -1,0 +1,11 @@
+# bold,size 3
+<a class="name" href="index.html" target="_blank">YKAN</a>
+Comunity
+
+
+# bold,size 2,left
+<a class="name" href="index.html" target="_blank"><img src="img/matrix_icon.png"></img></a>
+
+<a class="name" href="index.html" target="_blank"><img src="img/discord_icon.png"></img></a>
+
+<a class="name" href="https://github.com/arydevy/ykan" target="_blank"><img src="img/github_icon.png"></img></a>

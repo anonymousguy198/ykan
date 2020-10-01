@@ -1,0 +1,13 @@
+# bold,size 3
+<a class="name" href="index.html" target="_blank">YKAN</a>
+Contribuitors
+
+# bold,size 2
+GitHub Contribuitors
+# bold,size 1.50
+Author
+<a class="name" href="https://github.com/arydevy" target="_blank"><img src="img/github_icon.png"></img></a>
+Gold Contribuitors
+<a class="name" href="https://github.com/arydevy" target="_blank"><p>Anonymus Guy</p></a>
+
+<a class="name" href="https://github.com/arydevy" target="_blank"><p>naol arega</p></a>

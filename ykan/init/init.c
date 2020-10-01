@@ -75,6 +75,23 @@ int checkValidationLayerSupport(){
     vkEnumerateInstanceLayerProperties(&layerCount, availableLayers);
 
     return 0;
+
+    for (const char* layerName : validationLayers) {
+    bool layerFound = false;
+
+    for (int i sizeof(availableLayers);i>=0;i-=1;) {
+        if (strcmp(layerName, layerProperties.layerName) == 0) {
+            layerFound = true;
+            break;
+        }
+    }
+
+    if (!layerFound) {
+        return false;
+    }
+}
+
+return true;
 }
 //Init vulkan and create window
 void init(){
