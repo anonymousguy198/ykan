@@ -48,7 +48,7 @@ void createInstance() {
 
   int instResult=vkCreateInstance(&createInfo, NULL, &instance);
 
-  printf("%s\n",instResult);
+  printf("%d\n",instResult);
 
   if (instResult != VK_SUCCESS) {
       printf("failed to create instance!\n");}
