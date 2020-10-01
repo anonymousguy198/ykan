@@ -1,6 +1,7 @@
 # bold,size 3
+#title ykan
 <a class="name" href="index.html" target="_blank">YKAN</a>
-[Docs,docs/docs.html][Comunity,comunity.html][Contribuitors,contrib.html][Features, features.html][News, https://pokepetter.github.io/sswg/]
+[Docs,docs/docs.html][Comunity,comunity.html][Contribuitors,contrib.html][Features, features.html][News,https://ykanblog.wordpress.com]
 
 # bold,size 2,left
 Abouth
