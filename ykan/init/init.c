@@ -4,13 +4,16 @@
 #include <GLFW/glfw3.h>
 
 //  defined inii.h here
-//  it checkd if init.h is included by any other parent file 
+//  it checkd if init.h is included by any other parent file
 //  if not included it includes it
 //  init.h will be writteen as INIT_H
 
 #ifndef INIT_H
-#define INIT_H 
+#define INIT_H
 #endif
+
+
+
 
 
 //Window
@@ -63,7 +66,16 @@ void createInstance() {
   if (instResult != VK_SUCCESS) {
       printf("failed to create instance!\n");}
 }
+//validation layer (debug)
+int checkValidationLayerSupport(){
+    uint32_t layerCount;
+    vkEnumerateInstanceLayerProperties(&layerCount, NULL);
 
+    VkLayerProperties availableLayers[]={};
+    vkEnumerateInstanceLayerProperties(&layerCount, availableLayers->data());
+
+    return 0;
+}
 //Init vulkan and create window
 void init(){
   printf("init\n");
