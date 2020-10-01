@@ -5,7 +5,7 @@ int main(int argc, char const *argv[]) {
 
   struct test t;
 
-  initClass(t);
+  initClass(&t);
 
   printf("%d,\n",t.i);
 
