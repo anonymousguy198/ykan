@@ -1,8 +1,17 @@
 #include<stdio.h>
-#include "init.h"
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
+
+//  defined inii.h here
+//  it checkd if init.h is included by any other parent file 
+//  if not included it includes it
+//  init.h will be writteen as INIT_H
+
+#ifndef INIT_H
+#define INIT_H 
+#endif
+
 
 //Window
 GLFWwindow* window;
