@@ -72,7 +72,7 @@ int checkValidationLayerSupport(){
     vkEnumerateInstanceLayerProperties(&layerCount, NULL);
 
     VkLayerProperties availableLayers[]={};
-    vkEnumerateInstanceLayerProperties(&layerCount, availableLayers->data());
+    vkEnumerateInstanceLayerProperties(&layerCount, availableLayers);
 
     return 0;
 }
