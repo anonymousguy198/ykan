@@ -50,6 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+<<<<<<< HEAD
 
+=======
+>>>>>>> ff5d57db6804f412334a3898b225a8f01e3e2c80
 app
 test
