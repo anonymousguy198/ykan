@@ -51,8 +51,13 @@ Module.symvers
 Mkfile.old
 dkms.conf
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ff5d57db6804f412334a3898b225a8f01e3e2c80
 app
 test
+=======
+ykan/app
+ykan/test
+>>>>>>> ec726b7c6fce440a5aabf8ae2216639f750d583f
