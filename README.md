@@ -1,10 +1,10 @@
 # ykan
 
-**YKAN** is a game engine writen in c for game and graphichs development
-it makes it easy to write *Vulkan* apps easyer without needing to strugle
+**YKAN** is a game engine writen in c for game and graphics development.
+it makes it easy to write *Vulkan* apps easier without needing to struggle
 with vulkan's long setup process.
 
-##what ykan has
+### what ykan has
 
 **done**
 
@@ -15,26 +15,26 @@ with vulkan's long setup process.
 
 
 * vk init
-* suport for android and vr
+* support for android and vr
 * raytracing
 * main website
 * docs
 * drawing
-* shaiders
-* colision
+* shaders
+* collision
 * 2d support
 * 3d support
-* 2D and 3D colision
-* 2D and 3D phisichs engine
-* editor (the engine will not work like unity unreal or godot
-  is not a engine with gui but will have some tools for helping building levels
+* 2D and 3D collision
+* 2D and 3D physics engine
+* editor (the engine will not work like unity, unreal or godot
+  is not an engine with gui but will have some tools for helping build levels
   in 2D and 3D)
   * 2D tileset editor
-  * objects (player pos enemy spown)
-  * tile colision
+  * objects (player pos enemy spawn)
+  * tile collision
   * 3D level editor (that also has objects)
 
-##basic code
+### basic code
 
 To make a ykan project you need to setup some things.
 
@@ -83,12 +83,11 @@ int main(int argc, char const *argv[]) {
 
 ```
 
-## this project is open source
+### this project is open source
 please help me make this engine
-if you find some speling mistakes or you want to
-hel m with the engine development contact me
 
-
+if you find some spelling mistakes or you want to
+help me with the engine development contact me
 twitter @arydev_7
 
 telegram @arydev
