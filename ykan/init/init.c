@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <string.h>
 
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
@@ -12,9 +13,17 @@
 #define INIT_H
 #endif
 
+//smple boolean
+typedef enum{
+  false,true
+}bool;
+
+bool DEBUG=true;
 
 
-
+const char validationLayers[50][50] ={
+    "VK_LAYER_KHRONOS_validation"
+};
 
 //Window
 GLFWwindow* window;
@@ -37,33 +46,36 @@ void initWindow(){
 
 //the VkInstance
 void createInstance() {
-  VkApplicationInfo appInfo;
-  appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-  appInfo.pApplicationName = "App";
-  appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
-  appInfo.pEngineName = "YKAN";
-  appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
-  appInfo.apiVersion = VK_API_VERSION_1_0;
+    if (DEBUG && !checkValidationLayerSupport()) {
+    printf("validation layers requested, but not available!\n");
+    }
+    VkApplicationInfo appInfo;
+    appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+    appInfo.pApplicationName = "App";
+    appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.pEngineName = "YKAN";
+    appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
+    appInfo.apiVersion = VK_API_VERSION_1_0;
 
-  VkInstanceCreateInfo createInfo = {};
-  /*VkInstanceCreateInfo createInfo;
-  createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-  createInfo.pApplicationInfo = &appInfo;*/
+    VkInstanceCreateInfo createInfo = {};
+    /*VkInstanceCreateInfo createInfo;
+    createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+    createInfo.pApplicationInfo = &appInfo;*/
 
-  uint32_t glfwExtensionCount = 0;
-  const char** glfwExtensions;
-  glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
+    uint32_t glfwExtensionCount = 0;
+    const char** glfwExtensions;
+    glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
 
-  createInfo.enabledExtensionCount = glfwExtensionCount;
-  createInfo.ppEnabledExtensionNames = glfwExtensions;
+    createInfo.enabledExtensionCount = glfwExtensionCount;
+    createInfo.ppEnabledExtensionNames = glfwExtensions;
 
-  createInfo.enabledLayerCount = 0;
+    createInfo.enabledLayerCount = 0;
 
-  int instResult=vkCreateInstance(&createInfo, NULL, &instance);
+    int instResult=vkCreateInstance(&createInfo, NULL, &instance);
 
-  printf("%d\n",instResult);
+    printf("%d\n",instResult);
 
-  if (instResult != VK_SUCCESS) {
+    if (instResult != VK_SUCCESS) {
       printf("failed to create instance!\n");}
 }
 //validation layer (debug)
@@ -76,11 +88,12 @@ int checkValidationLayerSupport(){
 
     return 0;
 
-    for (const char* layerName : validationLayers) {
+    for (int layer=sizeof(validationLayers);layer>=0;layer-=1) {
     bool layerFound = false;
+    char layerName=validationLayers[layer];
 
-    for (int i sizeof(availableLayers);i>=0;i-=1;) {
-        if (strcmp(layerName, layerProperties.layerName) == 0) {
+    for (int i=0; i< sizeof(availableLayers)/sizeof(VkLayerProperties); i++) {
+        if (strcmp(layerName,availableLayers[i].layerName) == 0) {
             layerFound = true;
             break;
         }

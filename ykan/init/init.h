@@ -1,8 +1,4 @@
 
-//smple boolean
-typedef enum{
-  false,true
-}bool;
 
 
 //create the window
