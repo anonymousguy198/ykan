@@ -1,0 +1,49 @@
+.body{
+    color: black;
+    width: 80%;
+    left:50%;
+    right:50%;
+}
+
+/* divs */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    height: 10px;
+}
+.pages{
+     display: inline;
+     width: 60%;
+     align-self: right;
+}
+
+footer{
+    height: 200px;
+    /*color:black;*/
+}
+.footer_pages{
+    padding-left: 400px;
+    list-style: none;
+}
+ li{ list-style: none;}
+/* buttons and text */
+strong{
+    color:#FCBA04;
+    /*font-size: 30px;*/
+}
+a{
+    color: #FCBA04;
+    text-decoration: none;
+    width: 10px;
+    height: 10px;
+}
+button{
+    border:0px;
+    background-color: #FCBA04;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}

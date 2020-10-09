@@ -1,0 +1,17 @@
+https://coolors.co/fcba04-ff6663-171614
+
+background #171614
+main #FCBA04
+red #FF6663
+
+icons
+<img src="https://img.icons8.com/color/48/000000/open-source--v1.png"/>
+<img src="https://img.icons8.com/color/48/000000/matrix-logo.png"/>
+<img src="https://img.icons8.com/color/48/000000/github--v1.png"/>
+<img src="https://img.icons8.com/color/48/000000/c-programming.png"/>
+<img src="https://img.icons8.com/color/48/000000/android-os.png"/>
+<img src="https://img.icons8.com/color/48/000000/windows-10.png"/>
+<img src="https://img.icons8.com/color/48/000000/telegram-app.png"/>
+<img src="https://img.icons8.com/color/48/000000/discord-new-logo.png"/>
+<img src="https://img.icons8.com/color/48/000000/mac-os-logo.png"/>
+<img src="https://img.icons8.com/color/48/000000/linux.png"/>
