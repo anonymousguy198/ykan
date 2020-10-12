@@ -13,13 +13,17 @@
 #define INIT_H
 #endif
 
-//smple boolean
+
+// ============  Prototype Declaration  ==============
+// simple boolean
 typedef enum{
   false,true
 }bool;
 
-bool DEBUG=true;
+bool checkValidationLayerSupport();
 
+// ===========  Declaration and initialization  ==============
+bool DEBUG=true;
 
 const char validationLayers[50][50] ={
     "VK_LAYER_KHRONOS_validation"
@@ -46,9 +50,11 @@ void initWindow(){
 
 //the VkInstance
 void createInstance() {
+    printf("nuuuuuuuuuuuuu \n");
     if (DEBUG && !checkValidationLayerSupport()) {
     printf("validation layers requested, but not available!\n");
     }
+    printf("sgdvhsdgfhjagfhasdf \n");
     VkApplicationInfo appInfo;
     appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     appInfo.pApplicationName = "App";
@@ -56,6 +62,7 @@ void createInstance() {
     appInfo.pEngineName = "YKAN";
     appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
     appInfo.apiVersion = VK_API_VERSION_1_0;
+    printf("hiiiiiiiiiiiiiiiiiii \n");
 
     VkInstanceCreateInfo createInfo = {};
     /*VkInstanceCreateInfo createInfo;
@@ -71,6 +78,7 @@ void createInstance() {
 
     createInfo.enabledLayerCount = 0;
 
+    printf("yassssss\n");
     int instResult=vkCreateInstance(&createInfo, NULL, &instance);
 
     printf("%d\n",instResult);
@@ -79,32 +87,34 @@ void createInstance() {
       printf("failed to create instance!\n");}
 }
 //validation layer (debug)
-int checkValidationLayerSupport(){
-    uint32_t layerCount;
+bool checkValidationLayerSupport(){
+    uint32_t layerCount=0;
     vkEnumerateInstanceLayerProperties(&layerCount, NULL);
+
 
     VkLayerProperties availableLayers[]={};
     vkEnumerateInstanceLayerProperties(&layerCount, availableLayers);
 
-    return 0;
 
     for (int layer=sizeof(validationLayers);layer>=0;layer-=1) {
-    bool layerFound = false;
-    char layerName=validationLayers[layer];
+    	bool layerFound = false;
+    	const char *layerName = validationLayers[layer];
 
-    for (int i=0; i< sizeof(availableLayers)/sizeof(VkLayerProperties); i++) {
-        if (strcmp(layerName,availableLayers[i].layerName) == 0) {
-            layerFound = true;
-            break;
-        }
+    	printf("Nooooooooooo\n");
+    	for (int i=0; i< sizeof(availableLayers)/sizeof(VkLayerProperties); i++) {
+        	if (strcmp(layerName, availableLayers[i].layerName) ) {
+            		layerFound = true;
+           		break;
+        	}
+    	}
+
+    	if (!layerFound) {
+        	return false;
+    	}
     }
 
-    if (!layerFound) {
-        return false;
-    }
-}
-
-return true;
+    printf("Nooooooooooo\n");
+    return true;
 }
 //Init vulkan and create window
 void init(){
